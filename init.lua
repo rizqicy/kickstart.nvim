@@ -194,8 +194,12 @@ require('lazy').setup({
     'folke/tokyonight.nvim',
     priority = 1000,
     config = function()
+      require('tokyonight').setup {
+          on_colors = function(colors)
+            colors.border = "#565f89"
+          end
+      }
       vim.cmd.colorscheme 'tokyonight-night'
-      vim.cmd.highlight 'WinSeparator guifg=#565f89' -- HACK to change default color of windows split line (aka WinSeparator)
     end,
   },
 
@@ -267,7 +271,7 @@ require('lazy').setup({
   --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --
   --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {})
 
 -- [[ Setting options ]]
