@@ -243,6 +243,7 @@ require('lazy').setup({
 
   'tpope/vim-fugitive', -- Git related plugin #1
   'tpope/vim-rhubarb', -- Git related plugin #2
+  'tpope/vim-unimpaired', -- additional keymaps plugins (quickfix, buffer, etc.)
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
